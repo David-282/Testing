@@ -60,12 +60,12 @@ class FileDataWriterTest {
 
     @Test
     void countWords(){
-        String fileLocation = "/home/semi/Downloads/words.txt";
+        String fileLocation = "/home/semi/Downloads/document.txt";
         Path path = Paths.get(fileLocation);
 
         int number = FileDataWriter.wordCounter(path);
 
-        assertEquals(43509,number);
+        assertEquals(6770,number);
 
 
 

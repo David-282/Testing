@@ -48,12 +48,13 @@ public class FileDataWriter {
 
     public static int wordCounter(Path filePath) {
 
-//        if (!Files.exists(filePath)) return "File does not exist.";
+        if (!Files.exists(filePath)) return 0;
 
-        String data = FileDataWriter.readFile(filePath);
-        String [] words = data.split("[^a-zA-Z0-9]");
-      return data.length();
-//        return String.valueOf(wordCount);
+        String data = FileDataWriter.readFile(filePath).trim();
+
+
+            String[] words = data.split("\\W+");
+      return words.length;
     }
 
 
